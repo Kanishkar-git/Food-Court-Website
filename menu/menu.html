@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKL Food Court Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: url('abstract-solid-shining-yellow-gradient-studio-wall-room-background_1258-54539.avif') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        header h1 {
+            margin: 20px 0;
+            font-size: 36px;
+            color: #333;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .dish {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .dish img {
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .dish h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .dish p {
+            font-size: 14px;
+            color: #555;
+        }
+        .dish .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+        }
+        .order-button {
+            background-color: #f0ad4e;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .order-button:hover {
+            background-color: #ec971f;
+        }
+        .cart-section {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .cart-button {
+            background-color: #f0ad4e;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .cart-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .cart-modal h2 {
+            margin-bottom: 20px;
+        }
+        .cart-modal button {
+            margin-top: 20px;
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .cart-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JKL Food Court Menu</h1>
+    </header>
+    <main>
+        <section class="menu">
+            <!-- Dish 1: Pizza -->
+            <article class="dish">
+                <img src="menu-1.jpg" alt="Pizza">
+                <h2>Pizza</h2>
+                <p>A savory Italian dish featuring a round, flatbread crust topped with tomato sauce, cheese, and various toppings, baked to perfection.</p>
+                <p class="price">₹199</p>
+                <button class="order-button" data-price="199" data-name="Pizza">Order Now</button>
+            </article>
+
+            <!-- Dish 2: Veg Roll -->
+            <article class="dish">
+                <img src="menu-2.jpg" alt="Veg Roll">
+                <h2>Veg Roll</h2>
+                <p>A veg roll is a savory wrap filled with spiced vegetables and often served with chutney.</p>
+                <p class="price">₹99</p>
+                <button class="order-button" data-price="99" data-name="Veg Roll">Order Now</button>
+            </article>
+
+            <!-- Dish 3: Pasta -->
+            <article class="dish">
+                <img src="menu-3.jpg" alt="Pasta">
+                <h2>Pasta</h2>
+                <p>Pasta is a versatile Italian dish made from unleavened dough of wheat flour mixed with water or eggs, formed into various shapes and typically cooked by boiling.</p>
+                <p class="price">₹120</p>
+                <button class="order-button" data-price="120" data-name="Pasta">Order Now</button>
+            </article>
+
+            <!-- Dish 4: Tomato Pizza -->
+            <article class="dish">
+                <img src="menu-4.jpg" alt="Tomato Pizza">
+                <h2>Tomato Pizza</h2>
+                <p>Tomato pizza features a crispy crust topped with tangy tomato sauce, melted cheese, and often garnished with herbs and spices.</p>
+                <p class="price">₹175</p>
+                <button class="order-button" data-price="175" data-name="Tomato Pizza">Order Now</button>
+            </article>
+
+            <!-- Dish 5: KFC Chicken -->
+            <article class="dish">
+                <img src="menu-5.jpg" alt="KFC Chicken">
+                <h2>KFC Chicken</h2>
+                <p>KFC chicken is crispy on the outside, tender and juicy on the inside, with a blend of secret herbs and spices.</p>
+                <p class="price">₹199</p>
+                <button class="order-button" data-price="199" data-name="KFC Chicken">Order Now</button>
+            </article>
+
+            <!-- Dish 6: Chicken Biriyani -->
+            <article class="dish">
+                <img src="menu-6.jpg" alt="Chicken Biriyani">
+                <h2>Chicken Biriyani</h2>
+                <p>Chicken biriyani is a fragrant, spiced rice dish layered with tender chicken, aromatic herbs, and rich, flavorful sauces.</p>
+                <p class="price">₹120</p>
+                <button class="order-button" data-price="120" data-name="Chicken Biriyani">Order Now</button>
+            </article>
+        </section>
+
+        <!-- Cart Button -->
+        <div class="cart-section">
+            <button class="cart-button" id="viewCart">View Cart</button>
+        </div>
+
+        <!-- Cart Modal -->
+        <div class="cart-overlay" id="cartOverlay"></div>
+        <div class="cart-modal" id="cartModal">
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+            <p>Total: ₹<span id="cartTotal">0</span></p>
+            <button id="closeCart">Close</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 JKL Food Court</p>
+    </footer>
+
+    <script>
+        let cart = [];
+        let total = 0;
+
+        // Add to Cart functionality
+        document.querySelectorAll('.order-button').forEach(button => {
+            button.addEventListener('click', function () {
+                const itemName = this.getAttribute('data-name');
+                const itemPrice = parseInt(this.getAttribute('data-price'));
+
+                // Add item to cart
+                cart.push({ name: itemName, price: itemPrice });
+                total += itemPrice;
+
+                // Display the confirmation message
+                alert(`${itemName} added to the cart!`);
+            });
+        });
+
+        // View Cart functionality
+        document.getElementById('viewCart').addEventListener('click', function () {
+            const cartModal = document.getElementById('cartModal');
+            const cartOverlay = document.getElementById('cartOverlay');
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+
+            // Populate cart details
+            cartItems.innerHTML = cart.map(item => `${item.name} - ₹${item.price}`).join('<br>');
+            cartTotal.textContent = total;
+
+            // Show cart modal
+            cartModal.style.display = 'block';
+            cartOverlay.style.display = 'block';
+        });
+
+        // Close Cart functionality
+        document.getElementById('closeCart').addEventListener('click', function () {
+            const cartModal = document.getElementById('cartModal');
+            const cartOverlay = document.getElementById('cartOverlay');
+
+            // Hide cart modal
+            cartModal.style.display = 'none';
+            cartOverlay.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+/* Basic reset and body styling */
+body, h1, h2, p, form {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Logo container styling */
+.logo {
+    margin-bottom: 20px;
+}
+
+/* Logo image styling */
+.logo img {
+    max-width: 150px;
+    height: auto;
+    animation: rotateFade 5s ease-in-out infinite;
+}
+
+/* Slogan styling with animation */
+.slogan p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 10px;
+    animation: fadeInOut 6s ease-in-out infinite;
+}
+
+/* Contact form styling */
+.contact-form {
+    max-width: 600px;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h1 {
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Form elements styling */
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #2980b9;
+}
+
+/* Response message styling and animation */
+.response-message {
+    display: none;
+    font-size: 1.2rem;
+    color: #e74c3c;
+    margin-top: 20px;
+    animation: appear 2s ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes rotateFade {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

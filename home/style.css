@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+    
+    
+
+nav{
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+li,h1,ul{
+    display: inline;
+}
+ul{
+    margin-left: 60%;
+
+}
+
+li{
+    color:gray;
+    cursor: pointer;
+
+}
+li:hover{
+    color:white;
+}
+input{
+    width: 60%;
+    padding: 15px;
+}
+
+.searchbar{
+    padding: 50px;
+    text-align: center;
+}
+.centered-content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.headline {
+    color: white;
+    margin: 0;
+}
+.explore-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #ff5733; /* Adjust color as needed */
+    text-decoration: none;
+    border-radius: 5px;
+}
+.explore-button:hover {
+    background-color: #c70039; /* Adjust color as needed */
+}

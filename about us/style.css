@@ -1,0 +1,61 @@
+body {
+    background: url('./b3.avif') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.logo-container img {
+    width: 200px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.restaurant-image img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+.info {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.info p {
+    color: #000; /* Set paragraph text color to black */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+h1, h4 {
+    color: #f8f8f8; /* Keep headings white */
+}
+
+@media (max-width: 768px) {
+    .logo-container img {
+        width: 150px;
+    }
+    .info {
+        padding: 10px;
+    }
+}

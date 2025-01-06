@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKL Food Court</title>
+    <style>
+        body {
+            background: url('./pngtree-chef-is-slicing-up-food-on-a-wooden-board-picture-image_2662770.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            color: white;
+            font-size: 36px;
+        }
+        .header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .header ul li {
+            display: inline;
+        }
+        .header ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .header ul li a:hover,
+        .header ul li a:active {
+            color: red;
+        }
+
+        .centered-content {
+            text-align: center;
+            color: white; /* Changed to white color */
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+        }
+        .headline {
+            font-size: 36px;
+            margin: 0;
+        }
+        .explore-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff4081; /* Bright color for button */
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            border: 1px solid #ff4081; /* Reduced border size */
+        }
+        .explore-button:hover {
+            background-color: darkred;
+            border: 1px solid darkred; /* Border change on hover */
+        }
+
+        /* Style for the products, about, and contact sections */
+        .products, .about, .contact {
+            padding: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <h1>JKL Food Court</h1>
+            <ul>
+                <li><a href="https://kanishkar10.neocities.org/menu/home/">Home</a></li> <!-- Home button points to the current page -->
+                <li><a href="https://kanishkar10.neocities.org/menu/menu">Menu</a></li>
+                <li><a href="https://kanishkar10.neocities.org/about%20us/">About Us</a></li>
+                <li><a href="https://kanishkar10.neocities.org/about%20us/contact%20us/contactus">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="products">
+        <!-- Menu items will go here -->
+    </div>
+
+    <div class="about">
+        <!-- About section content -->
+    </div>
+
+    <div class="contact">
+        <!-- Contact section content -->
+    </div>
+    
+    <div class="centered-content">
+        <h1 class="headline">Be The Fastest In Delivering Your Food</h1><br>
+        <a href="https://kanishkar10.neocities.org/menu/menu" class="explore-button">Explore Now</a>
+    </div>
+</body>
+</html>
